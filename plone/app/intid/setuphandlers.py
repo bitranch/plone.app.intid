@@ -41,7 +41,7 @@ def register_all_content_for_intids(portal):
                 obj = brain.getObject()
                 register(obj)
                 registered += 1
-            except (AttributeError, KeyError):
+            except (AttributeError, KeyError, TypeError):
                 pass
     return registered, existing
 
